@@ -6,7 +6,7 @@ Docker image for [STNS](https://github.com/STNS/STNS).
 the Docker Hub page
 ---
 
-- https://hub.docker.com/r/stns/
+- https://hub.docker.com/r/stns/stns
 
 Base docker Image
 ---
