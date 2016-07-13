@@ -1,4 +1,5 @@
 FROM alpine:3.4
+MAINTAINER OKUMURA Takahiro <hfm.garden@gmail.com>
 
 ENV STNS_VERSION v0.1-3
 
