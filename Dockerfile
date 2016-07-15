@@ -14,6 +14,6 @@ RUN apk add --no-cache --virtual .build-deps go git \
 
 VOLUME ["/etc/stns"]
 
-CMD ["stns"]
+ENTRYPOINT ["/bin/stns"]
 
 EXPOSE 1104
