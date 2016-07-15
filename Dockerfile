@@ -12,6 +12,8 @@ RUN apk add --no-cache --virtual .build-deps go git \
       && apk del .build-deps \
       && rm -rf /go
 
+COPY stns.conf /etc/stns/stns.conf
+
 VOLUME ["/etc/stns"]
 
 CMD ["stns"]
