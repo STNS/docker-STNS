@@ -1,4 +1,4 @@
-STNS Dockerfile
+STNS Dockerfile [![Docker Pulls](https://img.shields.io/docker/pulls/stns/stns.svg?maxAge=2592000?style=flat-square)]()
 ===
 
 Docker image for [STNS](https://github.com/STNS/STNS).
