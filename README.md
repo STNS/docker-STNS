@@ -9,7 +9,7 @@ Docker image for [STNS](https://github.com/STNS/STNS).
 
 ### Supported tags
 
-- `latest`, `0.2', `0.2-0`
+- `latest`, `0.2`, `0.2-0`
 - `0.1`, `0.1-3`
 
 ### Base docker Image
