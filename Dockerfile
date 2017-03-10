@@ -1,7 +1,7 @@
 FROM alpine:3.5
 MAINTAINER OKUMURA Takahiro <hfm.garden@gmail.com>
 
-ENV STNS_VERSION v0.3-2
+ENV STNS_VERSION v0.3-3
 
 RUN apk add --no-cache --virtual .build-deps go git musl-dev \
       && GOPATH=/go go get github.com/STNS/STNS \
