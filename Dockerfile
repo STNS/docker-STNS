@@ -1,21 +1,15 @@
-FROM alpine:3.5
+FROM ubuntu:latest
 MAINTAINER OKUMURA Takahiro <hfm.garden@gmail.com>
 
-ENV STNS_VERSION v0.3-3
-
-RUN apk add --no-cache --virtual .build-deps go git musl-dev \
-      && GOPATH=/go go get github.com/STNS/STNS \
-      && cd /go/src/github.com/STNS/STNS \
-      && git checkout refs/tags/$STNS_VERSION \
-      && GOPATH=/go go build -v . \
-      && mv STNS /usr/bin/stns \
-      && apk del .build-deps \
-      && rm -rf /go
-
-COPY stns.conf /etc/stns/stns.conf
-
-VOLUME ["/etc/stns"]
-
+RUN apt-get update -qqy && \
+    apt-get install -qqy sudo curl gnupg && \
+    curl -fsSL https://repo.stns.jp/scripts/apt-repo.sh | sh && \
+    apt-get install -y stns-v2 libnss-stns-v2 && \
+    sed -i -e 's/^passwd:.*/passwd: files stns/g' /etc/nsswitch.conf && \
+        sed -i -e 's/^shadow:.*/shadow: files stns/g' /etc/nsswitch.conf && \
+        sed -i -e 's/^group:.*/group: files stns/g' /etc/nsswitch.conf
+COPY server.conf /etc/stns/server/stns.conf
+COPY client.conf /etc/stns/client/stns.conf
 CMD ["stns"]
 
 EXPOSE 1104
