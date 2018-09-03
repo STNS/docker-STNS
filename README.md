@@ -18,7 +18,7 @@ Docker image for [STNS](https://github.com/STNS/STNS).
 # docker run -d --name stns stns:latest
 # docker exec -it stns /bin/bash
 $ id example
-$ /usr/local/lib/stns-key-wrapper example
+$ /usr/lib/stns/stns-key-wrapper example
 ```
 
 ### Base docker Image
