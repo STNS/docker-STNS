@@ -1,5 +1,5 @@
 FROM ubuntu:latest
-MAINTAINER OKUMURA Takahiro <hfm.garden@gmail.com>
+LABEL maintainer "OKUMURA Takahiro <hfm.garden@gmail.com>"
 
 RUN apt-get update -qqy && \
     apt-get install -qqy sudo curl gnupg && \
