@@ -9,13 +9,21 @@ Docker image for [STNS](https://github.com/STNS/STNS).
 
 ### Supported tags
 
-- `latest`, `0.3`, `0.3-0`, `0.3-1`, `0.3-2`, `0.3-3`
+- `latest`, `1.0.0`, `0.3`, `0.3-0`, `0.3-1`, `0.3-2`, `0.3-3`
 - `0.2`, `0.2-1`, `0.2-2`
 - `0.1`, `0.1-3`
 
+### Howto
+```bash
+# docker run -d --name stns stns:latest
+# docker exec -it stns /bin/bash
+$ id example
+$ /usr/local/lib/stns-key-wrapper example
+```
+
 ### Base docker Image
 
-- [alpine](https://hub.docker.com/_/alpine/)
+- [ubuntu](https://hub.docker.com/_/ubuntu/)
 
 What's STNS?
 ---
