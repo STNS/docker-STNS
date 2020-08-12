@@ -1,4 +1,4 @@
-FROM ubuntu:latest
+FROM ubuntu:bionic
 LABEL maintainer "OKUMURA Takahiro <hfm.garden@gmail.com>"
 
 RUN apt-get update -qqy && \
